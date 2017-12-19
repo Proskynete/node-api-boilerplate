@@ -1,28 +1,22 @@
 'use strict';
 
-const bodyParser = require('body-parser');
-const express = require('express');
-const cors = require('cors');
-const app = express();
-
-// connect with DB
+/**
+ * Consts
+ */
 const mongoose = require('mongoose');
-const nameDataBase = 'node-api-boilerplate';
+const app = require('./config/app.js');
+const config = require('./config/config.js');
+
+
+/**
+ * Connect to Database and run app
+ */
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://localhost/${nameDataBase}`, {
-	useMongoClient: true
-}).then( () => console.log('DB Connected with Mongoose') )
-.catch( (err) => console.log(err));
+mongoose.connect(config.db, (err, res) => {
+	if(err) return console.log(`${err}`);
+	console.log('Connected with mongodb...');
 
-// Setting
-app.set('port', process.env.PORT || 3000);
-
-// Middlewers
-app.use(cors());
-app.use(bodyParser.json());
-
-// init server
-app.listen(app.get('port'), () => {
-	console.log(`Server run on port ${app.get('port')}`);
+	 app.listen(config.port, () => {
+    console.log(`Api running on port: ${config.port}`);
+  });
 });
-
