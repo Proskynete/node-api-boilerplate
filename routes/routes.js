@@ -11,10 +11,10 @@ const routes = express.Router();
  * Routes
  */
 routes.get('/', ItemsController.getAll);
-routes.get('/:postId', ItemsController.getById);
+routes.get('/:itemId', ItemsController.getById);
 routes.post('/', ItemsController.insert);
-routes.put('/:postId', ItemsController.update);
-routes.delete('/:postId', ItemsController.delete);
+routes.put('/:itemId', ItemsController.update);
+routes.delete('/:itemId', ItemsController.delete);
 
 /**
  * Export module
