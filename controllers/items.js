@@ -26,6 +26,12 @@ const ItemsController = {
                     message: `No se encontró la petición`
                 }
             });
+            if(items.length < 1) return res.status(200).json({
+                response: {
+                    status: 200,
+                    message: `No existen items`
+                }
+            });
             res.status(200).json({
                 response: {
                     status: 200,
