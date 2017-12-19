@@ -2,6 +2,7 @@
 
 const bodyParser = require('body-parser');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
 // connect with DB
@@ -17,6 +18,7 @@ mongoose.connect(`mongodb://localhost/${nameDataBase}`, {
 app.set('port', process.env.PORT || 3000);
 
 // Middlewers
+app.use(cors());
 app.use(bodyParser.json());
 
 // init server
