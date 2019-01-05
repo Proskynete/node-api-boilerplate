@@ -1,5 +1,5 @@
 {
-  "name": "node-api-boilerplate",
+  "name": "started-node",
   "version": "1.0.0",
   "main": "serve.js",
   "scripts": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Proskynete/node-api-boilerplate.git"
+    "url": "git+ssh://git@github.com:Proskynete/started-node.git"
   },
-  "author": "Eduardo Alvarez",
+  "author": "Eduardo Alvarez Castañeda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Proskynete/node-api-boilerplate/issues"
+    "url": "https://github.com/Proskynete/started-node/issues"
   },
-  "homepage": "https://github.com/Proskynete/node-api-boilerplate#readme",
+  "homepage": "https://github.com/Proskynete/started-node#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
