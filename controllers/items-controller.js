@@ -3,7 +3,7 @@
 /*
  * Imports
  */
-const Item = require('../models/item');
+const Item = require('../models/item-model');
 
 /*
  * Controller

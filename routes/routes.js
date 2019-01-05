@@ -4,7 +4,7 @@
  * Consts
  */
 const express = require('express');
-const ItemsController = require('../controllers/items');
+const ItemsController = require('../controllers/items-controller');
 const routes = express.Router();
 
 /**

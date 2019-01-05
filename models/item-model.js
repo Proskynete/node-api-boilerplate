@@ -13,7 +13,7 @@ const ItemSchema = Schema({
   	name: { type: String, require: true },
   	price: { type: Number, require: true }
 }, {
-	collection: 'items'
+	collection: 'Item'
 });
 
 
